@@ -97,3 +97,12 @@ local.properties
 hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,eclipse
+StartBoot01/mvnw
+StartBoot01/mvnw.cmd
+StartBoot01/pom.xml
+StartBoot01/.mvn/wrapper/maven-wrapper.jar
+StartBoot01/.mvn/wrapper/maven-wrapper.properties
+StartBoot01/.mvn/wrapper/MavenWrapperDownloader.java
+StartBoot01/src/main/java/com/example/hello/StartBoot01Application.java
+StartBoot01/src/main/resources/application.properties
+StartBoot01/src/test/java/com/example/hello/StartBoot01ApplicationTests.java
