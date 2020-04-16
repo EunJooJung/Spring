@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 기존은 Mtest에서 객체 생성하고 실행했다면, bean태크를 통해 ioc컨테이너 안에서 객체생성 후 Mtest안에서 사용하기만 한다. => 결합도를 느슨해진다  -->
+	<bean id="korean" class="com.test03.MessageBeanKo"></bean>
+	<bean id="english" class="com.test03.MessageBeanEn"></bean>
+	
+
+</beans>

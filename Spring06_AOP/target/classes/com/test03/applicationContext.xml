@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<bean id="man" class="com.test03.Man"/>
+	<bean id="woman" class="com.test03.Woman"/>
+	<bean id="myAspect" class="com.test03.MyAspect"/>
+	
+	<aop:config>
+		<aop:aspect ref="myAspect">
+			<aop:before method="before" pointcut="execution(public * com.test03.Man.*(..))"/><!-- com.test03.Man이 가진 모든 메소드들 -->
+			<aop:after method="after" pointcut="execution(public * com.test03.Man.*(..))"/>
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- advice : ccc(공통 관심사) advice랑 joinpoint랑 연결할건데 그걸 pointcut이 연결해준다. 지금은 Man에게만 연결 
+		 proxy 객체를 만들어 pointcut이 target과 advice 연결
+		 m.classWork를 호출하면 before 호출하고 classWork호출 after호출 
+		 joinpoint : advice가 연결될 수 있는 모든 위치들
+		 pointcut : advice랑 target을 어떤 joinpoint에서 연결할지 알려주는 애
+		 위 두개가 합쳐지면 advisor,aspect
+	-->
+	
+	
+</beans>

@@ -1,0 +1,25 @@
+스프링 버전 업데이트
+1. web.xml : 2.5 -> 4.0 버전으로 (new dynamic web project > web module을 4.0으로 생성 > 복붙)
+2. pom.xml : 
+	<java-version>1.8</java-version>로 바꿔준다, 
+	<org.springframework-version>5.2.5.RELEASE</org.springframework-version>로 바꿔준다.
+	servlet-api : <dependency> 4.0.1로 바꿔준다. (servlet-api -> javax.servlet-api)
+	jsp-api : 2.1 > 2.3.3으로 바꿔준다(jsp-api -> javax.servlet.jsp-api)
+	maven-compiler-plugin : <source>, <target> 1.6 > 1.8로 변경
+
+3. project facet 
+	dynamic web module : 2.5 -> 4.0
+	java : 1.6 -> 1.8로 
+4. maven update
+
+
+_jdbc
+5. pom.xml : spring-jdbc , ojdbc6
+6. web.xml : applicationContext.xml, *do, encodingFilter
+7. resources > sqls > db.properties 
+					> jdbc.sql
+8. WEB-INF/spring/appServlet/applicationContext.xml 
+9. dto, dao, biz, controller
+					
+					
+
